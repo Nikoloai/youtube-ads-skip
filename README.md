@@ -1,4 +1,4 @@
-# YouTube Auto Skip Ad
+# YouTube Ads Skip
 
 A small userscript for Tampermonkey that skips YouTube ads as soon as the **Skip** button appears, keeps your place in the video, and mutes the ad while it plays.
 
@@ -20,9 +20,15 @@ YouTube ignores clicks made by scripts on the Skip button: it only accepts a rea
 
 ## Install
 
+**Quick way:** with Tampermonkey installed and Developer mode on (steps 1–2 below), open
+[youtube-ads-skip.user.js (raw)](https://github.com/Nikoloai/youtube-ads-skip/raw/main/youtube-ads-skip.user.js)
+and Tampermonkey offers to install it. Installed this way, the script updates itself from this repository.
+
+**Manual way:**
+
 1. Install the **Tampermonkey** extension for your browser (Chrome Web Store or Microsoft Edge Add-ons).
 2. Open your browser's extensions page (`chrome://extensions` or `edge://extensions`) and turn on **Developer mode**. Without it, Tampermonkey does not run userscripts in current Chromium browsers. If Tampermonkey's details page has an **Allow User Scripts** toggle, turn that on too.
-3. Tampermonkey → **Create a new script**, delete the template, paste the contents of [`youtube-auto-skip.user.js`](youtube-auto-skip.user.js) and press **Ctrl+S**.
+3. Tampermonkey → **Create a new script**, delete the template, paste the contents of [`youtube-ads-skip.user.js`](youtube-ads-skip.user.js) and press **Ctrl+S**.
 4. Reload YouTube.
 
 ## Settings
@@ -57,6 +63,8 @@ This script is provided for personal use, as is. Using it may go against YouTube
 
 Userscript для Tampermonkey: пропускает рекламу на YouTube, как только появляется кнопка «Пропустить», возвращает вас на то же место в видео и выключает звук на время рекламы.
 
-**Установка:** поставьте расширение Tampermonkey, включите «Режим разработчика» на странице расширений (`edge://extensions` или `chrome://extensions`), затем Tampermonkey → **Create a new script**, вставьте код из файла [`youtube-auto-skip.user.js`](youtube-auto-skip.user.js) и нажмите Ctrl+S. Обновите YouTube.
+**Установка:** поставьте расширение Tampermonkey, включите «Режим разработчика» на странице расширений (`edge://extensions` или `chrome://extensions`), затем Tampermonkey → **Create a new script**, вставьте код из файла [`youtube-ads-skip.user.js`](youtube-ads-skip.user.js) и нажмите Ctrl+S. Обновите YouTube.
+
+Проще всего ставить по ссылке: [youtube-ads-skip.user.js (raw)](https://github.com/Nikoloai/youtube-ads-skip/raw/main/youtube-ads-skip.user.js). Tampermonkey сам предложит установку, и скрипт будет обновляться из этого репозитория.
 
 Это не блокировщик рекламы: реклама загружается, а реклама без кнопки «Пропустить» проигрывается без звука. Настройки описаны в таблице выше и в начале скрипта.

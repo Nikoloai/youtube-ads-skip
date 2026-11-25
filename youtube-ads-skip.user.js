@@ -1,9 +1,12 @@
 // ==UserScript==
-// @name         YouTube Auto Skip Ad
-// @namespace    https://github.com/Nikoloai/youtube-auto-skip
+// @name         YouTube Ads Skip
+// @namespace    https://github.com/Nikoloai/youtube-ads-skip
 // @author       Nikoloai
 // @license      MIT
-// @version      1.6
+// @homepageURL  https://github.com/Nikoloai/youtube-ads-skip
+// @downloadURL  https://github.com/Nikoloai/youtube-ads-skip/raw/main/youtube-ads-skip.user.js
+// @updateURL    https://github.com/Nikoloai/youtube-ads-skip/raw/main/youtube-ads-skip.user.js
+// @version      1.6.1
 // @description  Пропускает рекламу YouTube, как только появляется «Пропустить», возвращает точную позицию (не даёт YouTube откатить назад) и качество, выключает звук на время рекламы
 // @match        https://www.youtube.com/*
 // @match        https://m.youtube.com/*
