@@ -7,7 +7,8 @@ A small userscript for Tampermonkey that skips YouTube ads as soon as the **Skip
 ## What it does
 
 - Skips skippable ads the moment the **Skip** button shows up.
-- Returns you to the exact second you were at, and stops YouTube from rolling the video back after the ad.
+- Returns you to the exact second you were at after an ad.
+- Stops the video from jumping backwards on its own (for example, after an ad or while buffering on slow Wi-Fi). Your own seeks with the mouse, keyboard or wheel are left alone.
 - Tries to restore the video quality you had before the ad.
 - Mutes ads and turns the sound back on when they end.
 - Closes banner ads that cover the video.
@@ -39,13 +40,14 @@ At the top of the script:
 |---|---|---|
 | `MUTE_DURING_AD` | `true` | Mute ads while they play |
 | `FORCE_QUALITY` | `null` | `null` restores the quality you had; or set `'hd1080'`, `'hd720'`, `'large'` (480p), `'medium'` (360p) |
-| `GUARD_SEC` | `15` | Seconds after an ad during which the script stops YouTube from rolling the video back |
+| `GUARD_SEC` | `15` | Seconds after an ad during which the script holds your position |
+| `ANTI_ROLLBACK` | `true` | Undo backward jumps of more than `ROLLBACK_MIN_SEC` (3 s) that you did not make |
 | `RESUME_OFFSET_SEC` | `0` | Extra seconds to jump forward after an ad, if you ever need it |
 
 ## Known limitations
 
 - YouTube changes its player often, so the script can stop working after an update.
-- During the first `GUARD_SEC` seconds after an ad, seeking backwards yourself gets undone.
+- A backward jump within 2.5 seconds of any click, key press or scroll on the page counts as yours and is left alone.
 - YouTube may ignore the request to restore quality, so quality can drop for a moment after a skip.
 - Debug messages are printed to the browser console with the `[AutoSkip]` prefix.
 
